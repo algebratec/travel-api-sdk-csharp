@@ -75,7 +75,7 @@ namespace Example
             // Configuration.Default.ApiKeyPrefix.Add("X-AUTHORIZATION", "Bearer");
 
             var apiInstance = new FlightApi();
-            var body = new BookingKeyRequest(); // BookingKeyRequest |  (optional) 
+            var body = new FlightBookingKeyRequest(); // FlightBookingKeyRequest |  (optional) 
 
             try
             {
@@ -118,7 +118,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AlgebratecResponse](docs/AlgebratecResponse.md)
- - [Model.BookingKeyRequest](docs/BookingKeyRequest.md)
+ - [Model.CancellationPolicy](docs/CancellationPolicy.md)
  - [Model.Error](docs/Error.md)
  - [Model.ErrorFields](docs/ErrorFields.md)
  - [Model.FlightAirline](docs/FlightAirline.md)
@@ -139,14 +139,13 @@ Class | Method | HTTP request | Description
  - [Model.FlightBaggageAllowance](docs/FlightBaggageAllowance.md)
  - [Model.FlightBaseTraveller](docs/FlightBaseTraveller.md)
  - [Model.FlightBooking](docs/FlightBooking.md)
- - [Model.FlightBookingAirlines](docs/FlightBookingAirlines.md)
- - [Model.FlightBookingAirlinesAH](docs/FlightBookingAirlinesAH.md)
  - [Model.FlightBookingArrivalLocation](docs/FlightBookingArrivalLocation.md)
  - [Model.FlightBookingBounds](docs/FlightBookingBounds.md)
  - [Model.FlightBookingCustomer](docs/FlightBookingCustomer.md)
  - [Model.FlightBookingCustomerPax](docs/FlightBookingCustomerPax.md)
  - [Model.FlightBookingEtickets](docs/FlightBookingEtickets.md)
  - [Model.FlightBookingHistory](docs/FlightBookingHistory.md)
+ - [Model.FlightBookingKeyRequest](docs/FlightBookingKeyRequest.md)
  - [Model.FlightBookingResponse](docs/FlightBookingResponse.md)
  - [Model.FlightBookingSegments](docs/FlightBookingSegments.md)
  - [Model.FlightConfirmationRequest](docs/FlightConfirmationRequest.md)
@@ -155,7 +154,7 @@ Class | Method | HTTP request | Description
  - [Model.FlightDetailedPrice](docs/FlightDetailedPrice.md)
  - [Model.FlightFare](docs/FlightFare.md)
  - [Model.FlightFareResponse](docs/FlightFareResponse.md)
- - [Model.FlightFareRules](docs/FlightFareRules.md)
+ - [Model.FlightFareRule](docs/FlightFareRule.md)
  - [Model.FlightFareRulesResponse](docs/FlightFareRulesResponse.md)
  - [Model.FlightPaxTypePrice](docs/FlightPaxTypePrice.md)
  - [Model.FlightRecommendation](docs/FlightRecommendation.md)
@@ -178,7 +177,6 @@ Class | Method | HTTP request | Description
  - [Model.HotelAvailabilityResponseHotelsRooms](docs/HotelAvailabilityResponseHotelsRooms.md)
  - [Model.HotelAvailabilityResponseHotelsTaxes](docs/HotelAvailabilityResponseHotelsTaxes.md)
  - [Model.HotelAvailabilityResponseHotelsThemes](docs/HotelAvailabilityResponseHotelsThemes.md)
- - [Model.HotelAvailabilityResponseSuppliers](docs/HotelAvailabilityResponseSuppliers.md)
  - [Model.HotelCancellationResponse](docs/HotelCancellationResponse.md)
  - [Model.HotelCancellationResponseBooking](docs/HotelCancellationResponseBooking.md)
  - [Model.HotelCancellationResponseBookingHotel](docs/HotelCancellationResponseBookingHotel.md)
@@ -187,7 +185,6 @@ Class | Method | HTTP request | Description
  - [Model.HotelCheckRatesRequestRooms](docs/HotelCheckRatesRequestRooms.md)
  - [Model.HotelCheckRatesResponse](docs/HotelCheckRatesResponse.md)
  - [Model.HotelCheckRatesResponseHotel](docs/HotelCheckRatesResponseHotel.md)
- - [Model.HotelCheckRatesResponseHotelCancellationPolicies](docs/HotelCheckRatesResponseHotelCancellationPolicies.md)
  - [Model.HotelCheckRatesResponseHotelRates](docs/HotelCheckRatesResponseHotelRates.md)
  - [Model.HotelCheckRatesResponseHotelRooms](docs/HotelCheckRatesResponseHotelRooms.md)
  - [Model.HotelConfirmationRequest](docs/HotelConfirmationRequest.md)
@@ -203,6 +200,7 @@ Class | Method | HTTP request | Description
  - [Model.HotelConfirmationResponseBookingHotelRooms](docs/HotelConfirmationResponseBookingHotelRooms.md)
  - [Model.HotelRetrieveBookingResponse](docs/HotelRetrieveBookingResponse.md)
  - [Model.HotelRetrieveBookingResponseBooking](docs/HotelRetrieveBookingResponseBooking.md)
+ - [Model.Supplier](docs/Supplier.md)
 
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization

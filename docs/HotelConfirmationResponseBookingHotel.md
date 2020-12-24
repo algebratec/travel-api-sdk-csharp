@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **CheckIn** | **DateTime?** |  | [optional] 
 **CheckOut** | **DateTime?** |  | [optional] 
 **Rooms** | [**List&lt;HotelConfirmationResponseBookingHotelRooms&gt;**](HotelConfirmationResponseBookingHotelRooms.md) |  | [optional] 
-**Suppliers** | [**List&lt;HotelAvailabilityResponseSuppliers&gt;**](HotelAvailabilityResponseSuppliers.md) |  | [optional] 
+**Suppliers** | [**List&lt;Supplier&gt;**](Supplier.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

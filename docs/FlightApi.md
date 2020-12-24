@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="flightairrevalidate"></a>
 # **FlightAirRevalidate**
-> FlightFareResponse FlightAirRevalidate (BookingKeyRequest body = null)
+> FlightFareResponse FlightAirRevalidate (FlightBookingKeyRequest body = null)
 
 airRevalidate service to check if flight is still bookable
 
@@ -40,7 +40,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("X-AUTHORIZATION", "Bearer");
 
             var apiInstance = new FlightApi();
-            var body = new BookingKeyRequest(); // BookingKeyRequest |  (optional) 
+            var body = new FlightBookingKeyRequest(); // FlightBookingKeyRequest |  (optional) 
 
             try
             {
@@ -61,7 +61,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BookingKeyRequest**](BookingKeyRequest.md)|  | [optional] 
+ **body** | [**FlightBookingKeyRequest**](FlightBookingKeyRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="flightfare"></a>
 # **FlightFare**
-> FlightFareRulesResponse FlightFare (BookingKeyRequest body = null)
+> FlightFareRulesResponse FlightFare (FlightBookingKeyRequest body = null)
 
 flight fare service, this service provide the airline fare rules
 
@@ -292,7 +292,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("X-AUTHORIZATION", "Bearer");
 
             var apiInstance = new FlightApi();
-            var body = new BookingKeyRequest(); // BookingKeyRequest |  (optional) 
+            var body = new FlightBookingKeyRequest(); // FlightBookingKeyRequest |  (optional) 
 
             try
             {
@@ -313,7 +313,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BookingKeyRequest**](BookingKeyRequest.md)|  | [optional] 
+ **body** | [**FlightBookingKeyRequest**](FlightBookingKeyRequest.md)|  | [optional] 
 
 ### Return type
 

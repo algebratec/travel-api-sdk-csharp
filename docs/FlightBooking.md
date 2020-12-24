@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int?** |  | [optional] 
-**Airlines** | [**FlightBookingAirlines**](FlightBookingAirlines.md) |  | [optional] 
+**Airlines** | [**List&lt;FlightAirline&gt;**](FlightAirline.md) |  | [optional] 
 **BookingCanBeVoid** | **bool?** |  | [optional] 
 **BookingClass** | **string** |  | [optional] 
 **BookingDate** | **string** |  | [optional] 
