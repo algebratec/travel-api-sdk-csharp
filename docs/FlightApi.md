@@ -4,79 +4,16 @@ All URIs are relative to *https://virtserver.swaggerhub.com/alswagger/travel-api
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FlightAirRevalidate**](FlightApi.md#flightairrevalidate) | **POST** /v1/flight/booking/fare | airRevalidate service to check if flight is still bookable
 [**FlightAirportAutocomplete**](FlightApi.md#flightairportautocomplete) | **GET** /v1/flight/booking/airport/{term} | airport autocomplete service
 [**FlightAvailability**](FlightApi.md#flightavailability) | **POST** /v1/flight/booking/availability | flight availability service
 [**FlightBookingConfirmaiton**](FlightApi.md#flightbookingconfirmaiton) | **POST** /v1/flight/booking/confirmation | confirm flight booking
-[**FlightFare**](FlightApi.md#flightfare) | **POST** /v1/flight/booking/fareRules | flight fare service, this service provide the airline fare rules
+[**FlightFare**](FlightApi.md#flightfare) | **POST** /v1/flight/booking/fare | fare service to check if flight is still bookable
+[**FlightFareRules**](FlightApi.md#flightfarerules) | **POST** /v1/flight/booking/fareRules | flight fare rules service, this service provide the airline fare rules
 [**FlightOnHoldBookingConfirmation**](FlightApi.md#flightonholdbookingconfirmation) | **POST** /v1/flight/booking/confirmOnHoldBooking/{bookingId} | confirm on hold flight booking
 [**FlightRefreshPNR**](FlightApi.md#flightrefreshpnr) | **POST** /v1/flight/booking/refresh/{bookingId} | Refresh flight booking using booking id
 [**FlightRetrievePNR**](FlightApi.md#flightretrievepnr) | **GET** /v1/flight/booking/retrievePNR/{recordLocator} | retrieve PNR using PNR record
 [**FlightVoidPNR**](FlightApi.md#flightvoidpnr) | **DELETE** /v1/flight/booking/voidPNR/{bookingId} | void PNR service, this service should be used in non BSP market to cancel the PNR before midnight
 
-<a name="flightairrevalidate"></a>
-# **FlightAirRevalidate**
-> FlightFareResponse FlightAirRevalidate (FlightBookingKeyRequest body = null)
-
-airRevalidate service to check if flight is still bookable
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class FlightAirRevalidateExample
-    {
-        public void main()
-        {
-            // Configure API key authorization: api_auth
-            Configuration.Default.AddApiKey("X-AUTHORIZATION", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("X-AUTHORIZATION", "Bearer");
-
-            var apiInstance = new FlightApi();
-            var body = new FlightBookingKeyRequest(); // FlightBookingKeyRequest |  (optional) 
-
-            try
-            {
-                // airRevalidate service to check if flight is still bookable
-                FlightFareResponse result = apiInstance.FlightAirRevalidate(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FlightApi.FlightAirRevalidate: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**FlightBookingKeyRequest**](FlightBookingKeyRequest.md)|  | [optional] 
-
-### Return type
-
-[**FlightFareResponse**](FlightFareResponse.md)
-
-### Authorization
-
-[api_auth](../README.md#api_auth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="flightairportautocomplete"></a>
 # **FlightAirportAutocomplete**
 > FlightAirportAutocompleteResponse FlightAirportAutocomplete (string term)
@@ -268,9 +205,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="flightfare"></a>
 # **FlightFare**
-> FlightFareRulesResponse FlightFare (FlightBookingKeyRequest body = null)
+> FlightFareResponse FlightFare (FlightBookingKeyRequest body = null)
 
-flight fare service, this service provide the airline fare rules
+fare service to check if flight is still bookable
 
 ### Example
 ```csharp
@@ -296,13 +233,76 @@ namespace Example
 
             try
             {
-                // flight fare service, this service provide the airline fare rules
-                FlightFareRulesResponse result = apiInstance.FlightFare(body);
+                // fare service to check if flight is still bookable
+                FlightFareResponse result = apiInstance.FlightFare(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
                 Debug.Print("Exception when calling FlightApi.FlightFare: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**FlightBookingKeyRequest**](FlightBookingKeyRequest.md)|  | [optional] 
+
+### Return type
+
+[**FlightFareResponse**](FlightFareResponse.md)
+
+### Authorization
+
+[api_auth](../README.md#api_auth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="flightfarerules"></a>
+# **FlightFareRules**
+> FlightFareRulesResponse FlightFareRules (FlightBookingKeyRequest body = null)
+
+flight fare rules service, this service provide the airline fare rules
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class FlightFareRulesExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: api_auth
+            Configuration.Default.AddApiKey("X-AUTHORIZATION", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("X-AUTHORIZATION", "Bearer");
+
+            var apiInstance = new FlightApi();
+            var body = new FlightBookingKeyRequest(); // FlightBookingKeyRequest |  (optional) 
+
+            try
+            {
+                // flight fare rules service, this service provide the airline fare rules
+                FlightFareRulesResponse result = apiInstance.FlightFareRules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FlightApi.FlightFareRules: " + e.Message );
             }
         }
     }

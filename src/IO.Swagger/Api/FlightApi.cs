@@ -24,27 +24,6 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// airRevalidate service to check if flight is still bookable
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>FlightFareResponse</returns>
-        FlightFareResponse FlightAirRevalidate (FlightBookingKeyRequest body = null);
-
-        /// <summary>
-        /// airRevalidate service to check if flight is still bookable
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of FlightFareResponse</returns>
-        ApiResponse<FlightFareResponse> FlightAirRevalidateWithHttpInfo (FlightBookingKeyRequest body = null);
-        /// <summary>
         /// airport autocomplete service
         /// </summary>
         /// <remarks>
@@ -108,7 +87,28 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of FlightBookingResponse</returns>
         ApiResponse<FlightBookingResponse> FlightBookingConfirmaitonWithHttpInfo (FlightConfirmationRequest body = null);
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules
+        /// fare service to check if flight is still bookable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>FlightFareResponse</returns>
+        FlightFareResponse FlightFare (FlightBookingKeyRequest body = null);
+
+        /// <summary>
+        /// fare service to check if flight is still bookable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of FlightFareResponse</returns>
+        ApiResponse<FlightFareResponse> FlightFareWithHttpInfo (FlightBookingKeyRequest body = null);
+        /// <summary>
+        /// flight fare rules service, this service provide the airline fare rules
         /// </summary>
         /// <remarks>
         /// 
@@ -116,10 +116,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>FlightFareRulesResponse</returns>
-        FlightFareRulesResponse FlightFare (FlightBookingKeyRequest body = null);
+        FlightFareRulesResponse FlightFareRules (FlightBookingKeyRequest body = null);
 
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules
+        /// flight fare rules service, this service provide the airline fare rules
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlightFareRulesResponse</returns>
-        ApiResponse<FlightFareRulesResponse> FlightFareWithHttpInfo (FlightBookingKeyRequest body = null);
+        ApiResponse<FlightFareRulesResponse> FlightFareRulesWithHttpInfo (FlightBookingKeyRequest body = null);
         /// <summary>
         /// confirm on hold flight booking
         /// </summary>
@@ -215,27 +215,6 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// airRevalidate service to check if flight is still bookable
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of FlightFareResponse</returns>
-        System.Threading.Tasks.Task<FlightFareResponse> FlightAirRevalidateAsync (FlightBookingKeyRequest body = null);
-
-        /// <summary>
-        /// airRevalidate service to check if flight is still bookable
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (FlightFareResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlightFareResponse>> FlightAirRevalidateAsyncWithHttpInfo (FlightBookingKeyRequest body = null);
-        /// <summary>
         /// airport autocomplete service
         /// </summary>
         /// <remarks>
@@ -299,7 +278,28 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (FlightBookingResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlightBookingResponse>> FlightBookingConfirmaitonAsyncWithHttpInfo (FlightConfirmationRequest body = null);
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules
+        /// fare service to check if flight is still bookable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of FlightFareResponse</returns>
+        System.Threading.Tasks.Task<FlightFareResponse> FlightFareAsync (FlightBookingKeyRequest body = null);
+
+        /// <summary>
+        /// fare service to check if flight is still bookable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (FlightFareResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlightFareResponse>> FlightFareAsyncWithHttpInfo (FlightBookingKeyRequest body = null);
+        /// <summary>
+        /// flight fare rules service, this service provide the airline fare rules
         /// </summary>
         /// <remarks>
         /// 
@@ -307,10 +307,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlightFareRulesResponse</returns>
-        System.Threading.Tasks.Task<FlightFareRulesResponse> FlightFareAsync (FlightBookingKeyRequest body = null);
+        System.Threading.Tasks.Task<FlightFareRulesResponse> FlightFareRulesAsync (FlightBookingKeyRequest body = null);
 
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules
+        /// flight fare rules service, this service provide the airline fare rules
         /// </summary>
         /// <remarks>
         /// 
@@ -318,7 +318,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlightFareRulesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlightFareRulesResponse>> FlightFareAsyncWithHttpInfo (FlightBookingKeyRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<FlightFareRulesResponse>> FlightFareRulesAsyncWithHttpInfo (FlightBookingKeyRequest body = null);
         /// <summary>
         /// confirm on hold flight booking
         /// </summary>
@@ -512,157 +512,6 @@ namespace IO.Swagger.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
-        }
-
-        /// <summary>
-        /// airRevalidate service to check if flight is still bookable 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>FlightFareResponse</returns>
-        public FlightFareResponse FlightAirRevalidate (FlightBookingKeyRequest body = null)
-        {
-             ApiResponse<FlightFareResponse> localVarResponse = FlightAirRevalidateWithHttpInfo(body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// airRevalidate service to check if flight is still bookable 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of FlightFareResponse</returns>
-        public ApiResponse< FlightFareResponse > FlightAirRevalidateWithHttpInfo (FlightBookingKeyRequest body = null)
-        {
-
-            var localVarPath = "/v1/flight/booking/fare";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (api_auth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION")))
-            {
-                localVarHeaderParams["X-AUTHORIZATION"] = this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FlightAirRevalidate", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<FlightFareResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (FlightFareResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlightFareResponse)));
-        }
-
-        /// <summary>
-        /// airRevalidate service to check if flight is still bookable 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of FlightFareResponse</returns>
-        public async System.Threading.Tasks.Task<FlightFareResponse> FlightAirRevalidateAsync (FlightBookingKeyRequest body = null)
-        {
-             ApiResponse<FlightFareResponse> localVarResponse = await FlightAirRevalidateAsyncWithHttpInfo(body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// airRevalidate service to check if flight is still bookable 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (FlightFareResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlightFareResponse>> FlightAirRevalidateAsyncWithHttpInfo (FlightBookingKeyRequest body = null)
-        {
-
-            var localVarPath = "/v1/flight/booking/fare";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (api_auth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION")))
-            {
-                localVarHeaderParams["X-AUTHORIZATION"] = this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FlightAirRevalidate", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<FlightFareResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (FlightFareResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlightFareResponse)));
         }
 
         /// <summary>
@@ -1109,27 +958,27 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules 
+        /// fare service to check if flight is still bookable 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
-        /// <returns>FlightFareRulesResponse</returns>
-        public FlightFareRulesResponse FlightFare (FlightBookingKeyRequest body = null)
+        /// <returns>FlightFareResponse</returns>
+        public FlightFareResponse FlightFare (FlightBookingKeyRequest body = null)
         {
-             ApiResponse<FlightFareRulesResponse> localVarResponse = FlightFareWithHttpInfo(body);
+             ApiResponse<FlightFareResponse> localVarResponse = FlightFareWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules 
+        /// fare service to check if flight is still bookable 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of FlightFareRulesResponse</returns>
-        public ApiResponse< FlightFareRulesResponse > FlightFareWithHttpInfo (FlightBookingKeyRequest body = null)
+        /// <returns>ApiResponse of FlightFareResponse</returns>
+        public ApiResponse< FlightFareResponse > FlightFareWithHttpInfo (FlightBookingKeyRequest body = null)
         {
 
-            var localVarPath = "/v1/flight/booking/fareRules";
+            var localVarPath = "/v1/flight/booking/fare";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1178,31 +1027,182 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
+            return new ApiResponse<FlightFareResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FlightFareResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlightFareResponse)));
+        }
+
+        /// <summary>
+        /// fare service to check if flight is still bookable 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of FlightFareResponse</returns>
+        public async System.Threading.Tasks.Task<FlightFareResponse> FlightFareAsync (FlightBookingKeyRequest body = null)
+        {
+             ApiResponse<FlightFareResponse> localVarResponse = await FlightFareAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// fare service to check if flight is still bookable 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (FlightFareResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlightFareResponse>> FlightFareAsyncWithHttpInfo (FlightBookingKeyRequest body = null)
+        {
+
+            var localVarPath = "/v1/flight/booking/fare";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (api_auth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION")))
+            {
+                localVarHeaderParams["X-AUTHORIZATION"] = this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FlightFare", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FlightFareResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FlightFareResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlightFareResponse)));
+        }
+
+        /// <summary>
+        /// flight fare rules service, this service provide the airline fare rules 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>FlightFareRulesResponse</returns>
+        public FlightFareRulesResponse FlightFareRules (FlightBookingKeyRequest body = null)
+        {
+             ApiResponse<FlightFareRulesResponse> localVarResponse = FlightFareRulesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// flight fare rules service, this service provide the airline fare rules 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of FlightFareRulesResponse</returns>
+        public ApiResponse< FlightFareRulesResponse > FlightFareRulesWithHttpInfo (FlightBookingKeyRequest body = null)
+        {
+
+            var localVarPath = "/v1/flight/booking/fareRules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (api_auth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION")))
+            {
+                localVarHeaderParams["X-AUTHORIZATION"] = this.Configuration.GetApiKeyWithPrefix("X-AUTHORIZATION");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FlightFareRules", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
             return new ApiResponse<FlightFareRulesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (FlightFareRulesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlightFareRulesResponse)));
         }
 
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules 
+        /// flight fare rules service, this service provide the airline fare rules 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlightFareRulesResponse</returns>
-        public async System.Threading.Tasks.Task<FlightFareRulesResponse> FlightFareAsync (FlightBookingKeyRequest body = null)
+        public async System.Threading.Tasks.Task<FlightFareRulesResponse> FlightFareRulesAsync (FlightBookingKeyRequest body = null)
         {
-             ApiResponse<FlightFareRulesResponse> localVarResponse = await FlightFareAsyncWithHttpInfo(body);
+             ApiResponse<FlightFareRulesResponse> localVarResponse = await FlightFareRulesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// flight fare service, this service provide the airline fare rules 
+        /// flight fare rules service, this service provide the airline fare rules 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlightFareRulesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlightFareRulesResponse>> FlightFareAsyncWithHttpInfo (FlightBookingKeyRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlightFareRulesResponse>> FlightFareRulesAsyncWithHttpInfo (FlightBookingKeyRequest body = null)
         {
 
             var localVarPath = "/v1/flight/booking/fareRules";
@@ -1250,7 +1250,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FlightFare", localVarResponse);
+                Exception exception = ExceptionFactory("FlightFareRules", localVarResponse);
                 if (exception != null) throw exception;
             }
 

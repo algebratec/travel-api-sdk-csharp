@@ -75,17 +75,17 @@ namespace Example
             // Configuration.Default.ApiKeyPrefix.Add("X-AUTHORIZATION", "Bearer");
 
             var apiInstance = new FlightApi();
-            var body = new FlightBookingKeyRequest(); // FlightBookingKeyRequest |  (optional) 
+            var term = term_example;  // string | 
 
             try
             {
-                // airRevalidate service to check if flight is still bookable
-                FlightFareResponse result = apiInstance.FlightAirRevalidate(body);
+                // airport autocomplete service
+                FlightAirportAutocompleteResponse result = apiInstance.FlightAirportAutocomplete(term);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FlightApi.FlightAirRevalidate: " + e.Message );
+                Debug.Print("Exception when calling FlightApi.FlightAirportAutocomplete: " + e.Message );
             }
         }
     }
@@ -99,11 +99,11 @@ All URIs are relative to *https://virtserver.swaggerhub.com/alswagger/travel-api
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*FlightApi* | [**FlightAirRevalidate**](docs/FlightApi.md#flightairrevalidate) | **POST** /v1/flight/booking/fare | airRevalidate service to check if flight is still bookable
 *FlightApi* | [**FlightAirportAutocomplete**](docs/FlightApi.md#flightairportautocomplete) | **GET** /v1/flight/booking/airport/{term} | airport autocomplete service
 *FlightApi* | [**FlightAvailability**](docs/FlightApi.md#flightavailability) | **POST** /v1/flight/booking/availability | flight availability service
 *FlightApi* | [**FlightBookingConfirmaiton**](docs/FlightApi.md#flightbookingconfirmaiton) | **POST** /v1/flight/booking/confirmation | confirm flight booking
-*FlightApi* | [**FlightFare**](docs/FlightApi.md#flightfare) | **POST** /v1/flight/booking/fareRules | flight fare service, this service provide the airline fare rules
+*FlightApi* | [**FlightFare**](docs/FlightApi.md#flightfare) | **POST** /v1/flight/booking/fare | fare service to check if flight is still bookable
+*FlightApi* | [**FlightFareRules**](docs/FlightApi.md#flightfarerules) | **POST** /v1/flight/booking/fareRules | flight fare rules service, this service provide the airline fare rules
 *FlightApi* | [**FlightOnHoldBookingConfirmation**](docs/FlightApi.md#flightonholdbookingconfirmation) | **POST** /v1/flight/booking/confirmOnHoldBooking/{bookingId} | confirm on hold flight booking
 *FlightApi* | [**FlightRefreshPNR**](docs/FlightApi.md#flightrefreshpnr) | **POST** /v1/flight/booking/refresh/{bookingId} | Refresh flight booking using booking id
 *FlightApi* | [**FlightRetrievePNR**](docs/FlightApi.md#flightretrievepnr) | **GET** /v1/flight/booking/retrievePNR/{recordLocator} | retrieve PNR using PNR record

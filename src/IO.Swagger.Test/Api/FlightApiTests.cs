@@ -63,17 +63,6 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
-        /// Test FlightAirRevalidate
-        /// </summary>
-        [Test]
-        public void FlightAirRevalidateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //FlightBookingKeyRequest body = null;
-            //var response = instance.FlightAirRevalidate(body);
-            //Assert.IsInstanceOf<FlightFareResponse> (response, "response is FlightFareResponse");
-        }
-        /// <summary>
         /// Test FlightAirportAutocomplete
         /// </summary>
         [Test]
@@ -115,6 +104,17 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //FlightBookingKeyRequest body = null;
             //var response = instance.FlightFare(body);
+            //Assert.IsInstanceOf<FlightFareResponse> (response, "response is FlightFareResponse");
+        }
+        /// <summary>
+        /// Test FlightFareRules
+        /// </summary>
+        [Test]
+        public void FlightFareRulesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FlightBookingKeyRequest body = null;
+            //var response = instance.FlightFareRules(body);
             //Assert.IsInstanceOf<FlightFareRulesResponse> (response, "response is FlightFareRulesResponse");
         }
         /// <summary>

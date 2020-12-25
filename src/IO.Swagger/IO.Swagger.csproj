@@ -12,7 +12,7 @@ Contact: support@algebratec.com
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4132EF41-6FCB-4875-9F8C-FAB60C987A0E}</ProjectGuid>
+    <ProjectGuid>{0BA91162-A4F5-41CE-B26F-78EFE171A56D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IO.Swagger</RootNamespace>
