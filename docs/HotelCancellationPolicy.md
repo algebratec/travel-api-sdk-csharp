@@ -1,4 +1,4 @@
-# IO.Swagger.Model.HotelCheckRatesResponseHotelCancellationPolicies
+# IO.Swagger.Model.HotelCancellationPolicy
 ## Properties
 
 Name | Type | Description | Notes

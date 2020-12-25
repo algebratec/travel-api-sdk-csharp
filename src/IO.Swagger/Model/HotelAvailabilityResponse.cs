@@ -33,11 +33,9 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="HotelAvailabilityResponse" /> class.
         /// </summary>
         /// <param name="hotels">hotels.</param>
-        /// <param name="suppliers">suppliers.</param>
-        public HotelAvailabilityResponse(HotelAvailabilityResponseHotels hotels = default(HotelAvailabilityResponseHotels), List<Supplier> suppliers = default(List<Supplier>), List<Error> errors = default(List<Error>), string provider = default(string), bool? success = default(bool?)) : base(errors, provider, success)
+        public HotelAvailabilityResponse(HotelAvailabilityResponseHotels hotels = default(HotelAvailabilityResponseHotels), List<Error> errors = default(List<Error>), List<Provider> providers = default(List<Provider>), List<Supplier> suppliers = default(List<Supplier>), bool? success = default(bool?)) : base(errors, providers, suppliers, success)
         {
             this.Hotels = hotels;
-            this.Suppliers = suppliers;
         }
         
         /// <summary>
@@ -45,12 +43,6 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="hotels", EmitDefaultValue=false)]
         public HotelAvailabilityResponseHotels Hotels { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Suppliers
-        /// </summary>
-        [DataMember(Name="suppliers", EmitDefaultValue=false)]
-        public List<Supplier> Suppliers { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,7 +54,6 @@ namespace IO.Swagger.Model
             sb.Append("class HotelAvailabilityResponse {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Hotels: ").Append(Hotels).Append("\n");
-            sb.Append("  Suppliers: ").Append(Suppliers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,12 +92,6 @@ namespace IO.Swagger.Model
                     this.Hotels == input.Hotels ||
                     (this.Hotels != null &&
                     this.Hotels.Equals(input.Hotels))
-                ) && base.Equals(input) && 
-                (
-                    this.Suppliers == input.Suppliers ||
-                    this.Suppliers != null &&
-                    input.Suppliers != null &&
-                    this.Suppliers.SequenceEqual(input.Suppliers)
                 );
         }
 
@@ -121,8 +106,6 @@ namespace IO.Swagger.Model
                 int hashCode = base.GetHashCode();
                 if (this.Hotels != null)
                     hashCode = hashCode * 59 + this.Hotels.GetHashCode();
-                if (this.Suppliers != null)
-                    hashCode = hashCode * 59 + this.Suppliers.GetHashCode();
                 return hashCode;
             }
         }

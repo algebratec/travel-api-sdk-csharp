@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Price** | **int?** |  | [optional] 
 **Adults** | **int?** |  | [optional] 
 **Children** | **int?** |  | [optional] 
-**CancellationPolicies** | [**List&lt;CancellationPolicy&gt;**](CancellationPolicy.md) |  | [optional] 
+**CancellationPolicies** | [**List&lt;HotelCancellationPolicy&gt;**](HotelCancellationPolicy.md) |  | [optional] 
 **Paxes** | [**List&lt;HotelConfirmationResponseBookingHotelPaxes&gt;**](HotelConfirmationResponseBookingHotelPaxes.md) |  | [optional] 
 **Extras** | [**List&lt;HotelConfirmationResponseBookingHotelExtras&gt;**](HotelConfirmationResponseBookingHotelExtras.md) |  | [optional] 
 

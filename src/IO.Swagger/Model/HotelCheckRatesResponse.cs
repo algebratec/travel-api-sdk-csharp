@@ -33,7 +33,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="HotelCheckRatesResponse" /> class.
         /// </summary>
         /// <param name="hotel">hotel.</param>
-        public HotelCheckRatesResponse(HotelCheckRatesResponseHotel hotel = default(HotelCheckRatesResponseHotel), List<Error> errors = default(List<Error>), string provider = default(string), bool? success = default(bool?)) : base(errors, provider, success)
+        public HotelCheckRatesResponse(HotelCheckRatesResponseHotel hotel = default(HotelCheckRatesResponseHotel), List<Error> errors = default(List<Error>), List<Provider> providers = default(List<Provider>), List<Supplier> suppliers = default(List<Supplier>), bool? success = default(bool?)) : base(errors, providers, suppliers, success)
         {
             this.Hotel = hotel;
         }

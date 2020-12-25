@@ -95,6 +95,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="HotelAvailabilityResponseHotelsHotels" /> class.
         /// </summary>
         /// <param name="code">code.</param>
+        /// <param name="providerCode">providerCode.</param>
         /// <param name="contractCode">contractCode.</param>
         /// <param name="supplierCode">supplierCode.</param>
         /// <param name="country">country.</param>
@@ -121,9 +122,10 @@ namespace IO.Swagger.Model
         /// <param name="extras">extras.</param>
         /// <param name="combinations">combinations.</param>
         /// <param name="currency">currency.</param>
-        public HotelAvailabilityResponseHotelsHotels(string code = default(string), string contractCode = default(string), string supplierCode = default(string), string country = default(string), string name = default(string), string description = default(string), string providerName = default(string), string address = default(string), string phone = default(string), string mail = default(string), string fax = default(string), string image = default(string), List<HotelAvailabilityResponseHotelsImages> images = default(List<HotelAvailabilityResponseHotelsImages>), string zoneCode = default(string), CategoryEnum? category = default(CategoryEnum?), string zoneName = default(string), string comments = default(string), string latitude = default(string), string longitude = default(string), List<HotelAvailabilityResponseHotelsRooms> rooms = default(List<HotelAvailabilityResponseHotelsRooms>), List<HotelAvailabilityResponseHotelsAccommodations> accommodations = default(List<HotelAvailabilityResponseHotelsAccommodations>), List<HotelAvailabilityResponseHotelsThemes> themes = default(List<HotelAvailabilityResponseHotelsThemes>), List<HotelAvailabilityResponseHotelsThemes> facilities = default(List<HotelAvailabilityResponseHotelsThemes>), List<HotelAvailabilityResponseHotelsThemes> prohibitions = default(List<HotelAvailabilityResponseHotelsThemes>), List<HotelAvailabilityResponseHotelsExtras> extras = default(List<HotelAvailabilityResponseHotelsExtras>), List<HotelAvailabilityResponseHotelsCombinations> combinations = default(List<HotelAvailabilityResponseHotelsCombinations>), CurrencyEnum? currency = default(CurrencyEnum?))
+        public HotelAvailabilityResponseHotelsHotels(string code = default(string), string providerCode = default(string), string contractCode = default(string), string supplierCode = default(string), string country = default(string), string name = default(string), string description = default(string), string providerName = default(string), string address = default(string), string phone = default(string), string mail = default(string), string fax = default(string), string image = default(string), List<HotelAvailabilityResponseHotelsImages> images = default(List<HotelAvailabilityResponseHotelsImages>), string zoneCode = default(string), CategoryEnum? category = default(CategoryEnum?), string zoneName = default(string), string comments = default(string), string latitude = default(string), string longitude = default(string), List<HotelAvailabilityResponseHotelsRooms> rooms = default(List<HotelAvailabilityResponseHotelsRooms>), List<HotelAvailabilityResponseHotelsAccommodations> accommodations = default(List<HotelAvailabilityResponseHotelsAccommodations>), List<HotelAvailabilityResponseHotelsThemes> themes = default(List<HotelAvailabilityResponseHotelsThemes>), List<HotelAvailabilityResponseHotelsThemes> facilities = default(List<HotelAvailabilityResponseHotelsThemes>), List<HotelAvailabilityResponseHotelsThemes> prohibitions = default(List<HotelAvailabilityResponseHotelsThemes>), List<HotelAvailabilityResponseHotelsExtras> extras = default(List<HotelAvailabilityResponseHotelsExtras>), List<HotelAvailabilityResponseHotelsCombinations> combinations = default(List<HotelAvailabilityResponseHotelsCombinations>), CurrencyEnum? currency = default(CurrencyEnum?))
         {
             this.Code = code;
+            this.ProviderCode = providerCode;
             this.ContractCode = contractCode;
             this.SupplierCode = supplierCode;
             this.Country = country;
@@ -157,6 +159,12 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProviderCode
+        /// </summary>
+        [DataMember(Name="providerCode", EmitDefaultValue=false)]
+        public string ProviderCode { get; set; }
 
         /// <summary>
         /// Gets or Sets ContractCode
@@ -313,6 +321,7 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class HotelAvailabilityResponseHotelsHotels {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  ProviderCode: ").Append(ProviderCode).Append("\n");
             sb.Append("  ContractCode: ").Append(ContractCode).Append("\n");
             sb.Append("  SupplierCode: ").Append(SupplierCode).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -377,6 +386,11 @@ namespace IO.Swagger.Model
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
+                ) && 
+                (
+                    this.ProviderCode == input.ProviderCode ||
+                    (this.ProviderCode != null &&
+                    this.ProviderCode.Equals(input.ProviderCode))
                 ) && 
                 (
                     this.ContractCode == input.ContractCode ||
@@ -529,6 +543,8 @@ namespace IO.Swagger.Model
                 int hashCode = 41;
                 if (this.Code != null)
                     hashCode = hashCode * 59 + this.Code.GetHashCode();
+                if (this.ProviderCode != null)
+                    hashCode = hashCode * 59 + this.ProviderCode.GetHashCode();
                 if (this.ContractCode != null)
                     hashCode = hashCode * 59 + this.ContractCode.GetHashCode();
                 if (this.SupplierCode != null)

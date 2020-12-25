@@ -39,7 +39,7 @@ namespace IO.Swagger.Model
         /// <param name="adults">adults.</param>
         /// <param name="children">children.</param>
         /// <param name="cancellationPolicies">cancellationPolicies.</param>
-        public HotelCheckRatesResponseHotelRates(string rateKey = default(string), string boardName = default(string), string boardCode = default(string), int? net = default(int?), int? adults = default(int?), int? children = default(int?), List<CancellationPolicy> cancellationPolicies = default(List<CancellationPolicy>))
+        public HotelCheckRatesResponseHotelRates(string rateKey = default(string), string boardName = default(string), string boardCode = default(string), int? net = default(int?), int? adults = default(int?), int? children = default(int?), List<HotelCancellationPolicy> cancellationPolicies = default(List<HotelCancellationPolicy>))
         {
             this.RateKey = rateKey;
             this.BoardName = boardName;
@@ -90,7 +90,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets CancellationPolicies
         /// </summary>
         [DataMember(Name="cancellationPolicies", EmitDefaultValue=false)]
-        public List<CancellationPolicy> CancellationPolicies { get; set; }
+        public List<HotelCancellationPolicy> CancellationPolicies { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

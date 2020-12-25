@@ -33,7 +33,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="FlightFareRulesResponse" /> class.
         /// </summary>
         /// <param name="fareRules">fareRules.</param>
-        public FlightFareRulesResponse(List<FlightFareRule> fareRules = default(List<FlightFareRule>), List<Error> errors = default(List<Error>), string provider = default(string), bool? success = default(bool?)) : base(errors, provider, success)
+        public FlightFareRulesResponse(List<FlightFareRule> fareRules = default(List<FlightFareRule>), List<Error> errors = default(List<Error>), List<Provider> providers = default(List<Provider>), List<Supplier> suppliers = default(List<Supplier>), bool? success = default(bool?)) : base(errors, providers, suppliers, success)
         {
             this.FareRules = fareRules;
         }

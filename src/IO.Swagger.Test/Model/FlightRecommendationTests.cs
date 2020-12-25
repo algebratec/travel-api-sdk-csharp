@@ -66,6 +66,14 @@ namespace IO.Swagger.Test
 
 
         /// <summary>
+        /// Test the property 'ProviderCode'
+        /// </summary>
+        [Test]
+        public void ProviderCodeTest()
+        {
+            // TODO unit test for the property 'ProviderCode'
+        }
+        /// <summary>
         /// Test the property 'Baggage'
         /// </summary>
         [Test]

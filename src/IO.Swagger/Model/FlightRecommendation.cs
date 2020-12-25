@@ -32,6 +32,7 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlightRecommendation" /> class.
         /// </summary>
+        /// <param name="providerCode">providerCode.</param>
         /// <param name="baggage">baggage.</param>
         /// <param name="bookingKey">bookingKey.</param>
         /// <param name="fareDetails">fareDetails.</param>
@@ -39,8 +40,9 @@ namespace IO.Swagger.Model
         /// <param name="price">price.</param>
         /// <param name="subRecommendations">subRecommendations.</param>
         /// <param name="validatingCarrier">validatingCarrier.</param>
-        public FlightRecommendation(FlightBaggageAllowance baggage = default(FlightBaggageAllowance), string bookingKey = default(string), List<List<FlightAvailabilityFareDetails>> fareDetails = default(List<List<FlightAvailabilityFareDetails>>), List<List<int?>> flights = default(List<List<int?>>), FlightDetailedPrice price = default(FlightDetailedPrice), List<List<FlightAvailabilitySubRecommendation>> subRecommendations = default(List<List<FlightAvailabilitySubRecommendation>>), string validatingCarrier = default(string))
+        public FlightRecommendation(string providerCode = default(string), FlightBaggageAllowance baggage = default(FlightBaggageAllowance), string bookingKey = default(string), List<List<FlightAvailabilityFareDetails>> fareDetails = default(List<List<FlightAvailabilityFareDetails>>), List<List<int?>> flights = default(List<List<int?>>), FlightDetailedPrice price = default(FlightDetailedPrice), List<List<FlightAvailabilitySubRecommendation>> subRecommendations = default(List<List<FlightAvailabilitySubRecommendation>>), string validatingCarrier = default(string))
         {
+            this.ProviderCode = providerCode;
             this.Baggage = baggage;
             this.BookingKey = bookingKey;
             this.FareDetails = fareDetails;
@@ -50,6 +52,12 @@ namespace IO.Swagger.Model
             this.ValidatingCarrier = validatingCarrier;
         }
         
+        /// <summary>
+        /// Gets or Sets ProviderCode
+        /// </summary>
+        [DataMember(Name="providerCode", EmitDefaultValue=false)]
+        public string ProviderCode { get; set; }
+
         /// <summary>
         /// Gets or Sets Baggage
         /// </summary>
@@ -100,6 +108,7 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlightRecommendation {\n");
+            sb.Append("  ProviderCode: ").Append(ProviderCode).Append("\n");
             sb.Append("  Baggage: ").Append(Baggage).Append("\n");
             sb.Append("  BookingKey: ").Append(BookingKey).Append("\n");
             sb.Append("  FareDetails: ").Append(FareDetails).Append("\n");
@@ -141,6 +150,11 @@ namespace IO.Swagger.Model
                 return false;
 
             return 
+                (
+                    this.ProviderCode == input.ProviderCode ||
+                    (this.ProviderCode != null &&
+                    this.ProviderCode.Equals(input.ProviderCode))
+                ) && 
                 (
                     this.Baggage == input.Baggage ||
                     (this.Baggage != null &&
@@ -190,6 +204,8 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.ProviderCode != null)
+                    hashCode = hashCode * 59 + this.ProviderCode.GetHashCode();
                 if (this.Baggage != null)
                     hashCode = hashCode * 59 + this.Baggage.GetHashCode();
                 if (this.BookingKey != null)

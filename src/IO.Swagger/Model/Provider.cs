@@ -24,25 +24,33 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// FlightAvailabilityResponse
+    /// Provider
     /// </summary>
     [DataContract]
-        public partial class FlightAvailabilityResponse : AlgebratecResponse,  IEquatable<FlightAvailabilityResponse>, IValidatableObject
+        public partial class Provider :  IEquatable<Provider>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlightAvailabilityResponse" /> class.
+        /// Initializes a new instance of the <see cref="Provider" /> class.
         /// </summary>
-        /// <param name="availability">availability.</param>
-        public FlightAvailabilityResponse(FlightAvailability availability = default(FlightAvailability), List<Error> errors = default(List<Error>), List<Provider> providers = default(List<Provider>), List<Supplier> suppliers = default(List<Supplier>), bool? success = default(bool?)) : base(errors, providers, suppliers, success)
+        /// <param name="name">name.</param>
+        /// <param name="code">code.</param>
+        public Provider(string name = default(string), string code = default(string))
         {
-            this.Availability = availability;
+            this.Name = name;
+            this.Code = code;
         }
         
         /// <summary>
-        /// Gets or Sets Availability
+        /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="availability", EmitDefaultValue=false)]
-        public FlightAvailability Availability { get; set; }
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Code
+        /// </summary>
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public string Code { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -51,9 +59,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlightAvailabilityResponse {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
-            sb.Append("  Availability: ").Append(Availability).Append("\n");
+            sb.Append("class Provider {\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -62,7 +70,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -74,24 +82,29 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as FlightAvailabilityResponse);
+            return this.Equals(input as Provider);
         }
 
         /// <summary>
-        /// Returns true if FlightAvailabilityResponse instances are equal
+        /// Returns true if Provider instances are equal
         /// </summary>
-        /// <param name="input">Instance of FlightAvailabilityResponse to be compared</param>
+        /// <param name="input">Instance of Provider to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlightAvailabilityResponse input)
+        public bool Equals(Provider input)
         {
             if (input == null)
                 return false;
 
-            return base.Equals(input) && 
+            return 
                 (
-                    this.Availability == input.Availability ||
-                    (this.Availability != null &&
-                    this.Availability.Equals(input.Availability))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
                 );
         }
 
@@ -103,9 +116,11 @@ namespace IO.Swagger.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = base.GetHashCode();
-                if (this.Availability != null)
-                    hashCode = hashCode * 59 + this.Availability.GetHashCode();
+                int hashCode = 41;
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Code != null)
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
                 return hashCode;
             }
         }
@@ -117,7 +132,6 @@ namespace IO.Swagger.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            foreach(var x in BaseValidate(validationContext)) yield return x;
             yield break;
         }
     }

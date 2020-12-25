@@ -118,7 +118,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AlgebratecResponse](docs/AlgebratecResponse.md)
- - [Model.CancellationPolicy](docs/CancellationPolicy.md)
  - [Model.Error](docs/Error.md)
  - [Model.ErrorFields](docs/ErrorFields.md)
  - [Model.FlightAirline](docs/FlightAirline.md)
@@ -177,6 +176,7 @@ Class | Method | HTTP request | Description
  - [Model.HotelAvailabilityResponseHotelsRooms](docs/HotelAvailabilityResponseHotelsRooms.md)
  - [Model.HotelAvailabilityResponseHotelsTaxes](docs/HotelAvailabilityResponseHotelsTaxes.md)
  - [Model.HotelAvailabilityResponseHotelsThemes](docs/HotelAvailabilityResponseHotelsThemes.md)
+ - [Model.HotelCancellationPolicy](docs/HotelCancellationPolicy.md)
  - [Model.HotelCancellationResponse](docs/HotelCancellationResponse.md)
  - [Model.HotelCancellationResponseBooking](docs/HotelCancellationResponseBooking.md)
  - [Model.HotelCancellationResponseBookingHotel](docs/HotelCancellationResponseBookingHotel.md)
@@ -200,6 +200,7 @@ Class | Method | HTTP request | Description
  - [Model.HotelConfirmationResponseBookingHotelRooms](docs/HotelConfirmationResponseBookingHotelRooms.md)
  - [Model.HotelRetrieveBookingResponse](docs/HotelRetrieveBookingResponse.md)
  - [Model.HotelRetrieveBookingResponseBooking](docs/HotelRetrieveBookingResponseBooking.md)
+ - [Model.Provider](docs/Provider.md)
  - [Model.Supplier](docs/Supplier.md)
 
 <a name="documentation-for-authorization"></a>

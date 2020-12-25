@@ -24,10 +24,10 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// CancellationPolicy
+    /// HotelCancellationPolicy
     /// </summary>
     [DataContract]
-        public partial class CancellationPolicy :  IEquatable<CancellationPolicy>, IValidatableObject
+        public partial class HotelCancellationPolicy :  IEquatable<HotelCancellationPolicy>, IValidatableObject
     {
         /// <summary>
         /// Defines Type
@@ -56,13 +56,13 @@ namespace IO.Swagger.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CancellationPolicy" /> class.
+        /// Initializes a new instance of the <see cref="HotelCancellationPolicy" /> class.
         /// </summary>
         /// <param name="from">from.</param>
         /// <param name="to">to.</param>
         /// <param name="type">type.</param>
         /// <param name="value">value.</param>
-        public CancellationPolicy(DateTime? from = default(DateTime?), DateTime? to = default(DateTime?), TypeEnum? type = default(TypeEnum?), int? value = default(int?))
+        public HotelCancellationPolicy(DateTime? from = default(DateTime?), DateTime? to = default(DateTime?), TypeEnum? type = default(TypeEnum?), int? value = default(int?))
         {
             this.From = from;
             this.To = to;
@@ -96,7 +96,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CancellationPolicy {\n");
+            sb.Append("class HotelCancellationPolicy {\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -121,15 +121,15 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CancellationPolicy);
+            return this.Equals(input as HotelCancellationPolicy);
         }
 
         /// <summary>
-        /// Returns true if CancellationPolicy instances are equal
+        /// Returns true if HotelCancellationPolicy instances are equal
         /// </summary>
-        /// <param name="input">Instance of CancellationPolicy to be compared</param>
+        /// <param name="input">Instance of HotelCancellationPolicy to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CancellationPolicy input)
+        public bool Equals(HotelCancellationPolicy input)
         {
             if (input == null)
                 return false;

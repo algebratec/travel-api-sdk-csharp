@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ProviderCode** | **string** |  | [optional] 
 **Baggage** | [**FlightBaggageAllowance**](FlightBaggageAllowance.md) |  | [optional] 
 **BookingKey** | **string** |  | [optional] 
 **FareDetails** | **List&lt;List&lt;FlightAvailabilityFareDetails&gt;&gt;** |  | [optional] 

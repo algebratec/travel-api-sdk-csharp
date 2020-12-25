@@ -42,7 +42,7 @@ namespace IO.Swagger.Model
         /// <param name="children">children.</param>
         /// <param name="cancellationPolicies">cancellationPolicies.</param>
         /// <param name="paxes">paxes.</param>
-        public HotelCancellationResponseBookingHotelRooms(string code = default(string), string name = default(string), string rateComment = default(string), string boardName = default(string), string boardCode = default(string), int? price = default(int?), int? adults = default(int?), int? children = default(int?), List<CancellationPolicy> cancellationPolicies = default(List<CancellationPolicy>), List<HotelConfirmationResponseBookingHotelPaxes> paxes = default(List<HotelConfirmationResponseBookingHotelPaxes>))
+        public HotelCancellationResponseBookingHotelRooms(string code = default(string), string name = default(string), string rateComment = default(string), string boardName = default(string), string boardCode = default(string), int? price = default(int?), int? adults = default(int?), int? children = default(int?), List<HotelCancellationPolicy> cancellationPolicies = default(List<HotelCancellationPolicy>), List<HotelConfirmationResponseBookingHotelPaxes> paxes = default(List<HotelConfirmationResponseBookingHotelPaxes>))
         {
             this.Code = code;
             this.Name = name;
@@ -108,7 +108,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets CancellationPolicies
         /// </summary>
         [DataMember(Name="cancellationPolicies", EmitDefaultValue=false)]
-        public List<CancellationPolicy> CancellationPolicies { get; set; }
+        public List<HotelCancellationPolicy> CancellationPolicies { get; set; }
 
         /// <summary>
         /// Gets or Sets Paxes

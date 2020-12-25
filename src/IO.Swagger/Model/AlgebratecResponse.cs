@@ -33,12 +33,14 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="AlgebratecResponse" /> class.
         /// </summary>
         /// <param name="errors">errors.</param>
-        /// <param name="provider">provider.</param>
+        /// <param name="providers">providers.</param>
+        /// <param name="suppliers">suppliers.</param>
         /// <param name="success">success.</param>
-        public AlgebratecResponse(List<Error> errors = default(List<Error>), string provider = default(string), bool? success = default(bool?))
+        public AlgebratecResponse(List<Error> errors = default(List<Error>), List<Provider> providers = default(List<Provider>), List<Supplier> suppliers = default(List<Supplier>), bool? success = default(bool?))
         {
             this.Errors = errors;
-            this.Provider = provider;
+            this.Providers = providers;
+            this.Suppliers = suppliers;
             this.Success = success;
         }
         
@@ -49,10 +51,16 @@ namespace IO.Swagger.Model
         public List<Error> Errors { get; set; }
 
         /// <summary>
-        /// Gets or Sets Provider
+        /// Gets or Sets Providers
         /// </summary>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public string Provider { get; set; }
+        [DataMember(Name="providers", EmitDefaultValue=false)]
+        public List<Provider> Providers { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Suppliers
+        /// </summary>
+        [DataMember(Name="suppliers", EmitDefaultValue=false)]
+        public List<Supplier> Suppliers { get; set; }
 
         /// <summary>
         /// Gets or Sets Success
@@ -69,7 +77,8 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class AlgebratecResponse {\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
-            sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  Providers: ").Append(Providers).Append("\n");
+            sb.Append("  Suppliers: ").Append(Suppliers).Append("\n");
             sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,9 +121,16 @@ namespace IO.Swagger.Model
                     this.Errors.SequenceEqual(input.Errors)
                 ) && 
                 (
-                    this.Provider == input.Provider ||
-                    (this.Provider != null &&
-                    this.Provider.Equals(input.Provider))
+                    this.Providers == input.Providers ||
+                    this.Providers != null &&
+                    input.Providers != null &&
+                    this.Providers.SequenceEqual(input.Providers)
+                ) && 
+                (
+                    this.Suppliers == input.Suppliers ||
+                    this.Suppliers != null &&
+                    input.Suppliers != null &&
+                    this.Suppliers.SequenceEqual(input.Suppliers)
                 ) && 
                 (
                     this.Success == input.Success ||
@@ -134,8 +150,10 @@ namespace IO.Swagger.Model
                 int hashCode = 41;
                 if (this.Errors != null)
                     hashCode = hashCode * 59 + this.Errors.GetHashCode();
-                if (this.Provider != null)
-                    hashCode = hashCode * 59 + this.Provider.GetHashCode();
+                if (this.Providers != null)
+                    hashCode = hashCode * 59 + this.Providers.GetHashCode();
+                if (this.Suppliers != null)
+                    hashCode = hashCode * 59 + this.Suppliers.GetHashCode();
                 if (this.Success != null)
                     hashCode = hashCode * 59 + this.Success.GetHashCode();
                 return hashCode;

@@ -1,9 +1,10 @@
-# IO.Swagger.Model.BookingKeyRequest
+# IO.Swagger.Model.Provider
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BookingKey** | **string** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**Code** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

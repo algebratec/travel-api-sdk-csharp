@@ -88,8 +88,7 @@ namespace IO.Swagger.Model
         /// <param name="checkIn">checkIn.</param>
         /// <param name="checkOut">checkOut.</param>
         /// <param name="rooms">rooms.</param>
-        /// <param name="suppliers">suppliers.</param>
-        public HotelConfirmationResponseBookingHotel(string code = default(string), string name = default(string), string description = default(string), string providerName = default(string), string address = default(string), string country = default(string), string phone = default(string), string email = default(string), string fax = default(string), string image = default(string), CategoryEnum? category = default(CategoryEnum?), string zoneCode = default(string), string latitude = default(string), string longitude = default(string), string zoneName = default(string), int? totalPrice = default(int?), string currency = default(string), DateTime? checkIn = default(DateTime?), DateTime? checkOut = default(DateTime?), List<HotelConfirmationResponseBookingHotelRooms> rooms = default(List<HotelConfirmationResponseBookingHotelRooms>), List<Supplier> suppliers = default(List<Supplier>))
+        public HotelConfirmationResponseBookingHotel(string code = default(string), string name = default(string), string description = default(string), string providerName = default(string), string address = default(string), string country = default(string), string phone = default(string), string email = default(string), string fax = default(string), string image = default(string), CategoryEnum? category = default(CategoryEnum?), string zoneCode = default(string), string latitude = default(string), string longitude = default(string), string zoneName = default(string), int? totalPrice = default(int?), string currency = default(string), DateTime? checkIn = default(DateTime?), DateTime? checkOut = default(DateTime?), List<HotelConfirmationResponseBookingHotelRooms> rooms = default(List<HotelConfirmationResponseBookingHotelRooms>))
         {
             this.Code = code;
             this.Name = name;
@@ -111,7 +110,6 @@ namespace IO.Swagger.Model
             this.CheckIn = checkIn;
             this.CheckOut = checkOut;
             this.Rooms = rooms;
-            this.Suppliers = suppliers;
         }
         
         /// <summary>
@@ -232,12 +230,6 @@ namespace IO.Swagger.Model
         public List<HotelConfirmationResponseBookingHotelRooms> Rooms { get; set; }
 
         /// <summary>
-        /// Gets or Sets Suppliers
-        /// </summary>
-        [DataMember(Name="suppliers", EmitDefaultValue=false)]
-        public List<Supplier> Suppliers { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -265,7 +257,6 @@ namespace IO.Swagger.Model
             sb.Append("  CheckIn: ").Append(CheckIn).Append("\n");
             sb.Append("  CheckOut: ").Append(CheckOut).Append("\n");
             sb.Append("  Rooms: ").Append(Rooms).Append("\n");
-            sb.Append("  Suppliers: ").Append(Suppliers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -400,12 +391,6 @@ namespace IO.Swagger.Model
                     this.Rooms != null &&
                     input.Rooms != null &&
                     this.Rooms.SequenceEqual(input.Rooms)
-                ) && 
-                (
-                    this.Suppliers == input.Suppliers ||
-                    this.Suppliers != null &&
-                    input.Suppliers != null &&
-                    this.Suppliers.SequenceEqual(input.Suppliers)
                 );
         }
 
@@ -458,8 +443,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.CheckOut.GetHashCode();
                 if (this.Rooms != null)
                     hashCode = hashCode * 59 + this.Rooms.GetHashCode();
-                if (this.Suppliers != null)
-                    hashCode = hashCode * 59 + this.Suppliers.GetHashCode();
                 return hashCode;
             }
         }

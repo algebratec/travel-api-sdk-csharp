@@ -33,7 +33,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="FlightAirportAutocompleteResponse" /> class.
         /// </summary>
         /// <param name="predictions">predictions.</param>
-        public FlightAirportAutocompleteResponse(List<FlightAirportAutocomplete> predictions = default(List<FlightAirportAutocomplete>), List<Error> errors = default(List<Error>), string provider = default(string), bool? success = default(bool?)) : base(errors, provider, success)
+        public FlightAirportAutocompleteResponse(List<FlightAirportAutocomplete> predictions = default(List<FlightAirportAutocomplete>), List<Error> errors = default(List<Error>), List<Provider> providers = default(List<Provider>), List<Supplier> suppliers = default(List<Supplier>), bool? success = default(bool?)) : base(errors, providers, suppliers, success)
         {
             this.Predictions = predictions;
         }
