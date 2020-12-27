@@ -162,20 +162,20 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'NrOfYouth'
         }
         /// <summary>
-        /// Test the property 'RequestedFlightNonStop'
+        /// Test the property 'DirectFlight'
         /// </summary>
         [Test]
-        public void RequestedFlightNonStopTest()
+        public void DirectFlightTest()
         {
-            // TODO unit test for the property 'RequestedFlightNonStop'
+            // TODO unit test for the property 'DirectFlight'
         }
         /// <summary>
-        /// Test the property 'RequestedMultiCity'
+        /// Test the property 'WithBaggage'
         /// </summary>
         [Test]
-        public void RequestedMultiCityTest()
+        public void WithBaggageTest()
         {
-            // TODO unit test for the property 'RequestedMultiCity'
+            // TODO unit test for the property 'WithBaggage'
         }
 
     }

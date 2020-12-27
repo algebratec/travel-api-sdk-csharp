@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FlightAvailibilityRequestBound
+# IO.Swagger.Model.FlightAvailabilityRequestBound
 ## Properties
 
 Name | Type | Description | Notes

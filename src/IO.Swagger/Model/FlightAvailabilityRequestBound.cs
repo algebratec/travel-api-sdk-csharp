@@ -24,18 +24,18 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// FlightAvailibilityRequestBound
+    /// FlightAvailabilityRequestBound
     /// </summary>
     [DataContract]
-        public partial class FlightAvailibilityRequestBound :  IEquatable<FlightAvailibilityRequestBound>, IValidatableObject
+        public partial class FlightAvailabilityRequestBound :  IEquatable<FlightAvailabilityRequestBound>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlightAvailibilityRequestBound" /> class.
+        /// Initializes a new instance of the <see cref="FlightAvailabilityRequestBound" /> class.
         /// </summary>
         /// <param name="departureDate">departureDate.</param>
         /// <param name="destination">destination.</param>
         /// <param name="origin">origin.</param>
-        public FlightAvailibilityRequestBound(string departureDate = default(string), string destination = default(string), string origin = default(string))
+        public FlightAvailabilityRequestBound(string departureDate = default(string), string destination = default(string), string origin = default(string))
         {
             this.DepartureDate = departureDate;
             this.Destination = destination;
@@ -67,7 +67,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlightAvailibilityRequestBound {\n");
+            sb.Append("class FlightAvailabilityRequestBound {\n");
             sb.Append("  DepartureDate: ").Append(DepartureDate).Append("\n");
             sb.Append("  Destination: ").Append(Destination).Append("\n");
             sb.Append("  Origin: ").Append(Origin).Append("\n");
@@ -91,15 +91,15 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as FlightAvailibilityRequestBound);
+            return this.Equals(input as FlightAvailabilityRequestBound);
         }
 
         /// <summary>
-        /// Returns true if FlightAvailibilityRequestBound instances are equal
+        /// Returns true if FlightAvailabilityRequestBound instances are equal
         /// </summary>
-        /// <param name="input">Instance of FlightAvailibilityRequestBound to be compared</param>
+        /// <param name="input">Instance of FlightAvailabilityRequestBound to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlightAvailibilityRequestBound input)
+        public bool Equals(FlightAvailabilityRequestBound input)
         {
             if (input == null)
                 return false;

@@ -30,6 +30,29 @@ namespace IO.Swagger.Model
         public partial class FlightBaseTraveller :  IEquatable<FlightBaseTraveller>, IValidatableObject
     {
         /// <summary>
+        /// F &#x3D; Female &lt;br&gt; M &#x3D; Male
+        /// </summary>
+        /// <value>F &#x3D; Female &lt;br&gt; M &#x3D; Male</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SexEnum
+        {
+            /// <summary>
+            /// Enum F for value: F
+            /// </summary>
+            [EnumMember(Value = "F")]
+            F = 1,
+            /// <summary>
+            /// Enum M for value: M
+            /// </summary>
+            [EnumMember(Value = "M")]
+            M = 2        }
+        /// <summary>
+        /// F &#x3D; Female &lt;br&gt; M &#x3D; Male
+        /// </summary>
+        /// <value>F &#x3D; Female &lt;br&gt; M &#x3D; Male</value>
+        [DataMember(Name="sex", EmitDefaultValue=false)]
+        public SexEnum? Sex { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="FlightBaseTraveller" /> class.
         /// </summary>
         /// <param name="birthDate">birthDate.</param>
@@ -38,8 +61,8 @@ namespace IO.Swagger.Model
         /// <param name="nationality">nationality.</param>
         /// <param name="passportExpirationDate">passportExpirationDate.</param>
         /// <param name="passportNumber">passportNumber.</param>
-        /// <param name="sex">sex.</param>
-        public FlightBaseTraveller(string birthDate = default(string), string firstname = default(string), string lastname = default(string), string nationality = default(string), DateTime? passportExpirationDate = default(DateTime?), string passportNumber = default(string), string sex = default(string))
+        /// <param name="sex">F &#x3D; Female &lt;br&gt; M &#x3D; Male.</param>
+        public FlightBaseTraveller(string birthDate = default(string), string firstname = default(string), string lastname = default(string), string nationality = default(string), DateTime? passportExpirationDate = default(DateTime?), string passportNumber = default(string), SexEnum? sex = default(SexEnum?))
         {
             this.BirthDate = birthDate;
             this.Firstname = firstname;
@@ -87,11 +110,6 @@ namespace IO.Swagger.Model
         [DataMember(Name="passportNumber", EmitDefaultValue=false)]
         public string PassportNumber { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Sex
-        /// </summary>
-        [DataMember(Name="sex", EmitDefaultValue=false)]
-        public string Sex { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

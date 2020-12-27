@@ -30,21 +30,110 @@ namespace IO.Swagger.Model
         public partial class FlightTraveller : FlightBaseTraveller,  IEquatable<FlightTraveller>, IValidatableObject
     {
         /// <summary>
+        /// ADT &#x3D; Adult &lt;br&gt; CHD &#x3D; Child &lt;br&gt; INF &#x3D; Infant &lt;br&gt; INS &#x3D; Infant with seat &lt;br&gt; YTH &#x3D; Youth &lt;br&gt; SNR &#x3D; Senior
+        /// </summary>
+        /// <value>ADT &#x3D; Adult &lt;br&gt; CHD &#x3D; Child &lt;br&gt; INF &#x3D; Infant &lt;br&gt; INS &#x3D; Infant with seat &lt;br&gt; YTH &#x3D; Youth &lt;br&gt; SNR &#x3D; Senior</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum
+        {
+            /// <summary>
+            /// Enum ADT for value: ADT
+            /// </summary>
+            [EnumMember(Value = "ADT")]
+            ADT = 1,
+            /// <summary>
+            /// Enum CHD for value: CHD
+            /// </summary>
+            [EnumMember(Value = "CHD")]
+            CHD = 2,
+            /// <summary>
+            /// Enum INF for value: INF
+            /// </summary>
+            [EnumMember(Value = "INF")]
+            INF = 3,
+            /// <summary>
+            /// Enum INS for value: INS
+            /// </summary>
+            [EnumMember(Value = "INS")]
+            INS = 4,
+            /// <summary>
+            /// Enum YTH for value: YTH
+            /// </summary>
+            [EnumMember(Value = "YTH")]
+            YTH = 5,
+            /// <summary>
+            /// Enum SNR for value: SNR
+            /// </summary>
+            [EnumMember(Value = "SNR")]
+            SNR = 6        }
+        /// <summary>
+        /// ADT &#x3D; Adult &lt;br&gt; CHD &#x3D; Child &lt;br&gt; INF &#x3D; Infant &lt;br&gt; INS &#x3D; Infant with seat &lt;br&gt; YTH &#x3D; Youth &lt;br&gt; SNR &#x3D; Senior
+        /// </summary>
+        /// <value>ADT &#x3D; Adult &lt;br&gt; CHD &#x3D; Child &lt;br&gt; INF &#x3D; Infant &lt;br&gt; INS &#x3D; Infant with seat &lt;br&gt; YTH &#x3D; Youth &lt;br&gt; SNR &#x3D; Senior</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// BBML &#x3D; INFANT/BABY FOOD &lt;br&gt; CHML &#x3D; CHILD MEAL &lt;br&gt; MOML &#x3D; HALAL MEAL &lt;br&gt; VGML &#x3D; VEGETARIAN MEAL &lt;br&gt; WCHR &#x3D; Wheelchair &lt;br&gt; WCHS &#x3D; Wheelchair with assistance &lt;br&gt; WCHC &#x3D; Passenger is completely motionless
+        /// </summary>
+        /// <value>BBML &#x3D; INFANT/BABY FOOD &lt;br&gt; CHML &#x3D; CHILD MEAL &lt;br&gt; MOML &#x3D; HALAL MEAL &lt;br&gt; VGML &#x3D; VEGETARIAN MEAL &lt;br&gt; WCHR &#x3D; Wheelchair &lt;br&gt; WCHS &#x3D; Wheelchair with assistance &lt;br&gt; WCHC &#x3D; Passenger is completely motionless</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SpecialServiceEnum
+        {
+            /// <summary>
+            /// Enum BBML for value: BBML
+            /// </summary>
+            [EnumMember(Value = "BBML")]
+            BBML = 1,
+            /// <summary>
+            /// Enum CHML for value: CHML
+            /// </summary>
+            [EnumMember(Value = "CHML")]
+            CHML = 2,
+            /// <summary>
+            /// Enum MOML for value: MOML
+            /// </summary>
+            [EnumMember(Value = "MOML")]
+            MOML = 3,
+            /// <summary>
+            /// Enum VGML for value: VGML
+            /// </summary>
+            [EnumMember(Value = "VGML")]
+            VGML = 4,
+            /// <summary>
+            /// Enum WCHR for value: WCHR
+            /// </summary>
+            [EnumMember(Value = "WCHR")]
+            WCHR = 5,
+            /// <summary>
+            /// Enum WCHS for value: WCHS
+            /// </summary>
+            [EnumMember(Value = "WCHS")]
+            WCHS = 6,
+            /// <summary>
+            /// Enum WCHC for value: WCHC
+            /// </summary>
+            [EnumMember(Value = "WCHC")]
+            WCHC = 7        }
+        /// <summary>
+        /// BBML &#x3D; INFANT/BABY FOOD &lt;br&gt; CHML &#x3D; CHILD MEAL &lt;br&gt; MOML &#x3D; HALAL MEAL &lt;br&gt; VGML &#x3D; VEGETARIAN MEAL &lt;br&gt; WCHR &#x3D; Wheelchair &lt;br&gt; WCHS &#x3D; Wheelchair with assistance &lt;br&gt; WCHC &#x3D; Passenger is completely motionless
+        /// </summary>
+        /// <value>BBML &#x3D; INFANT/BABY FOOD &lt;br&gt; CHML &#x3D; CHILD MEAL &lt;br&gt; MOML &#x3D; HALAL MEAL &lt;br&gt; VGML &#x3D; VEGETARIAN MEAL &lt;br&gt; WCHR &#x3D; Wheelchair &lt;br&gt; WCHS &#x3D; Wheelchair with assistance &lt;br&gt; WCHC &#x3D; Passenger is completely motionless</value>
+        [DataMember(Name="specialService", EmitDefaultValue=false)]
+        public SpecialServiceEnum? SpecialService { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="FlightTraveller" /> class.
         /// </summary>
-        /// <param name="specialService">specialService.</param>
+        /// <param name="type">ADT &#x3D; Adult &lt;br&gt; CHD &#x3D; Child &lt;br&gt; INF &#x3D; Infant &lt;br&gt; INS &#x3D; Infant with seat &lt;br&gt; YTH &#x3D; Youth &lt;br&gt; SNR &#x3D; Senior.</param>
+        /// <param name="specialService">BBML &#x3D; INFANT/BABY FOOD &lt;br&gt; CHML &#x3D; CHILD MEAL &lt;br&gt; MOML &#x3D; HALAL MEAL &lt;br&gt; VGML &#x3D; VEGETARIAN MEAL &lt;br&gt; WCHR &#x3D; Wheelchair &lt;br&gt; WCHS &#x3D; Wheelchair with assistance &lt;br&gt; WCHC &#x3D; Passenger is completely motionless.</param>
         /// <param name="infant">infant.</param>
-        public FlightTraveller(string specialService = default(string), FlightBaseTraveller infant = default(FlightBaseTraveller), string birthDate = default(string), string firstname = default(string), string lastname = default(string), string nationality = default(string), DateTime? passportExpirationDate = default(DateTime?), string passportNumber = default(string), string sex = default(string)) : base(birthDate, firstname, lastname, nationality, passportExpirationDate, passportNumber, sex)
+        public FlightTraveller(TypeEnum? type = default(TypeEnum?), SpecialServiceEnum? specialService = default(SpecialServiceEnum?), FlightBaseTraveller infant = default(FlightBaseTraveller), string birthDate = default(string), string firstname = default(string), string lastname = default(string), string nationality = default(string), DateTime? passportExpirationDate = default(DateTime?), string passportNumber = default(string), SexEnum? sex = default(SexEnum?)) : base(birthDate, firstname, lastname, nationality, passportExpirationDate, passportNumber, sex)
         {
+            this.Type = type;
             this.SpecialService = specialService;
             this.Infant = infant;
         }
         
-        /// <summary>
-        /// Gets or Sets SpecialService
-        /// </summary>
-        [DataMember(Name="specialService", EmitDefaultValue=false)]
-        public string SpecialService { get; set; }
+
 
         /// <summary>
         /// Gets or Sets Infant
@@ -61,6 +150,7 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class FlightTraveller {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  SpecialService: ").Append(SpecialService).Append("\n");
             sb.Append("  Infant: ").Append(Infant).Append("\n");
             sb.Append("}\n");
@@ -98,6 +188,11 @@ namespace IO.Swagger.Model
 
             return base.Equals(input) && 
                 (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
+                ) && base.Equals(input) && 
+                (
                     this.SpecialService == input.SpecialService ||
                     (this.SpecialService != null &&
                     this.SpecialService.Equals(input.SpecialService))
@@ -118,6 +213,8 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = base.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.SpecialService != null)
                     hashCode = hashCode * 59 + this.SpecialService.GetHashCode();
                 if (this.Infant != null)

@@ -30,8 +30,9 @@ namespace IO.Swagger.Model
         public partial class FlightAvailabilityRequest :  IEquatable<FlightAvailabilityRequest>, IValidatableObject
     {
         /// <summary>
-        /// Defines Language
+        /// EN &#x3D; English &lt;br&gt; FR &#x3D; French &lt;br&gt; AR &#x3D; Arabic
         /// </summary>
+        /// <value>EN &#x3D; English &lt;br&gt; FR &#x3D; French &lt;br&gt; AR &#x3D; Arabic</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum LanguageEnum
         {
@@ -51,8 +52,9 @@ namespace IO.Swagger.Model
             [EnumMember(Value = "AR")]
             AR = 3        }
         /// <summary>
-        /// Gets or Sets Language
+        /// EN &#x3D; English &lt;br&gt; FR &#x3D; French &lt;br&gt; AR &#x3D; Arabic
         /// </summary>
+        /// <value>EN &#x3D; English &lt;br&gt; FR &#x3D; French &lt;br&gt; AR &#x3D; Arabic</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public LanguageEnum? Language { get; set; }
         /// <summary>
@@ -94,8 +96,9 @@ namespace IO.Swagger.Model
         [DataMember(Name="cabinClass", EmitDefaultValue=false)]
         public CabinClassEnum? CabinClass { get; set; }
         /// <summary>
-        /// Defines TripType
+        /// rt &#x3D; Roundtrip &lt;br&gt; ow &#x3D; Oneway &lt;br&gt; md &#x3D; multidestination
         /// </summary>
+        /// <value>rt &#x3D; Roundtrip &lt;br&gt; ow &#x3D; Oneway &lt;br&gt; md &#x3D; multidestination</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum TripTypeEnum
         {
@@ -115,17 +118,18 @@ namespace IO.Swagger.Model
             [EnumMember(Value = "md")]
             Md = 3        }
         /// <summary>
-        /// Gets or Sets TripType
+        /// rt &#x3D; Roundtrip &lt;br&gt; ow &#x3D; Oneway &lt;br&gt; md &#x3D; multidestination
         /// </summary>
+        /// <value>rt &#x3D; Roundtrip &lt;br&gt; ow &#x3D; Oneway &lt;br&gt; md &#x3D; multidestination</value>
         [DataMember(Name="tripType", EmitDefaultValue=false)]
         public TripTypeEnum? TripType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="FlightAvailabilityRequest" /> class.
         /// </summary>
-        /// <param name="language">language.</param>
+        /// <param name="language">EN &#x3D; English &lt;br&gt; FR &#x3D; French &lt;br&gt; AR &#x3D; Arabic.</param>
         /// <param name="bounds">bounds.</param>
         /// <param name="cabinClass">M &#x3D; ECONOMY STANDARD &lt;br&gt; Y &#x3D; ECONOMY &lt;br&gt; W &#x3D; ECONOMY PREMIUM &lt;br&gt; C &#x3D; BUSINESS &lt;br&gt; F &#x3D; FIRST.</param>
-        /// <param name="tripType">tripType.</param>
+        /// <param name="tripType">rt &#x3D; Roundtrip &lt;br&gt; ow &#x3D; Oneway &lt;br&gt; md &#x3D; multidestination.</param>
         /// <param name="flexible">flexible.</param>
         /// <param name="range">range.</param>
         /// <param name="nrOfAdult">nrOfAdult.</param>
@@ -134,9 +138,9 @@ namespace IO.Swagger.Model
         /// <param name="nrOfInfantWithSeat">nrOfInfantWithSeat.</param>
         /// <param name="nrOfSenior">nrOfSenior.</param>
         /// <param name="nrOfYouth">nrOfYouth.</param>
-        /// <param name="requestedFlightNonStop">requestedFlightNonStop.</param>
-        /// <param name="requestedMultiCity">requestedMultiCity.</param>
-        public FlightAvailabilityRequest(LanguageEnum? language = default(LanguageEnum?), List<FlightAvailibilityRequestBound> bounds = default(List<FlightAvailibilityRequestBound>), CabinClassEnum? cabinClass = default(CabinClassEnum?), TripTypeEnum? tripType = default(TripTypeEnum?), bool? flexible = default(bool?), int? range = default(int?), int? nrOfAdult = default(int?), int? nrOfChild = default(int?), int? nrOfInfant = default(int?), int? nrOfInfantWithSeat = default(int?), int? nrOfSenior = default(int?), int? nrOfYouth = default(int?), bool? requestedFlightNonStop = default(bool?), bool? requestedMultiCity = default(bool?))
+        /// <param name="directFlight">if true, the system will reply with direct flights only.</param>
+        /// <param name="withBaggage">if true, the system will reply with recommendations with baggage only.</param>
+        public FlightAvailabilityRequest(LanguageEnum? language = default(LanguageEnum?), List<FlightAvailabilityRequestBound> bounds = default(List<FlightAvailabilityRequestBound>), CabinClassEnum? cabinClass = default(CabinClassEnum?), TripTypeEnum? tripType = default(TripTypeEnum?), bool? flexible = default(bool?), int? range = default(int?), int? nrOfAdult = default(int?), int? nrOfChild = default(int?), int? nrOfInfant = default(int?), int? nrOfInfantWithSeat = default(int?), int? nrOfSenior = default(int?), int? nrOfYouth = default(int?), bool? directFlight = default(bool?), bool? withBaggage = default(bool?))
         {
             this.Language = language;
             this.Bounds = bounds;
@@ -150,8 +154,8 @@ namespace IO.Swagger.Model
             this.NrOfInfantWithSeat = nrOfInfantWithSeat;
             this.NrOfSenior = nrOfSenior;
             this.NrOfYouth = nrOfYouth;
-            this.RequestedFlightNonStop = requestedFlightNonStop;
-            this.RequestedMultiCity = requestedMultiCity;
+            this.DirectFlight = directFlight;
+            this.WithBaggage = withBaggage;
         }
         
 
@@ -159,7 +163,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Bounds
         /// </summary>
         [DataMember(Name="bounds", EmitDefaultValue=false)]
-        public List<FlightAvailibilityRequestBound> Bounds { get; set; }
+        public List<FlightAvailabilityRequestBound> Bounds { get; set; }
 
 
 
@@ -212,16 +216,18 @@ namespace IO.Swagger.Model
         public int? NrOfYouth { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestedFlightNonStop
+        /// if true, the system will reply with direct flights only
         /// </summary>
-        [DataMember(Name="requestedFlightNonStop", EmitDefaultValue=false)]
-        public bool? RequestedFlightNonStop { get; set; }
+        /// <value>if true, the system will reply with direct flights only</value>
+        [DataMember(Name="directFlight", EmitDefaultValue=false)]
+        public bool? DirectFlight { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestedMultiCity
+        /// if true, the system will reply with recommendations with baggage only
         /// </summary>
-        [DataMember(Name="requestedMultiCity", EmitDefaultValue=false)]
-        public bool? RequestedMultiCity { get; set; }
+        /// <value>if true, the system will reply with recommendations with baggage only</value>
+        [DataMember(Name="withBaggage", EmitDefaultValue=false)]
+        public bool? WithBaggage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -243,8 +249,8 @@ namespace IO.Swagger.Model
             sb.Append("  NrOfInfantWithSeat: ").Append(NrOfInfantWithSeat).Append("\n");
             sb.Append("  NrOfSenior: ").Append(NrOfSenior).Append("\n");
             sb.Append("  NrOfYouth: ").Append(NrOfYouth).Append("\n");
-            sb.Append("  RequestedFlightNonStop: ").Append(RequestedFlightNonStop).Append("\n");
-            sb.Append("  RequestedMultiCity: ").Append(RequestedMultiCity).Append("\n");
+            sb.Append("  DirectFlight: ").Append(DirectFlight).Append("\n");
+            sb.Append("  WithBaggage: ").Append(WithBaggage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -341,14 +347,14 @@ namespace IO.Swagger.Model
                     this.NrOfYouth.Equals(input.NrOfYouth))
                 ) && 
                 (
-                    this.RequestedFlightNonStop == input.RequestedFlightNonStop ||
-                    (this.RequestedFlightNonStop != null &&
-                    this.RequestedFlightNonStop.Equals(input.RequestedFlightNonStop))
+                    this.DirectFlight == input.DirectFlight ||
+                    (this.DirectFlight != null &&
+                    this.DirectFlight.Equals(input.DirectFlight))
                 ) && 
                 (
-                    this.RequestedMultiCity == input.RequestedMultiCity ||
-                    (this.RequestedMultiCity != null &&
-                    this.RequestedMultiCity.Equals(input.RequestedMultiCity))
+                    this.WithBaggage == input.WithBaggage ||
+                    (this.WithBaggage != null &&
+                    this.WithBaggage.Equals(input.WithBaggage))
                 );
         }
 
@@ -385,10 +391,10 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.NrOfSenior.GetHashCode();
                 if (this.NrOfYouth != null)
                     hashCode = hashCode * 59 + this.NrOfYouth.GetHashCode();
-                if (this.RequestedFlightNonStop != null)
-                    hashCode = hashCode * 59 + this.RequestedFlightNonStop.GetHashCode();
-                if (this.RequestedMultiCity != null)
-                    hashCode = hashCode * 59 + this.RequestedMultiCity.GetHashCode();
+                if (this.DirectFlight != null)
+                    hashCode = hashCode * 59 + this.DirectFlight.GetHashCode();
+                if (this.WithBaggage != null)
+                    hashCode = hashCode * 59 + this.WithBaggage.GetHashCode();
                 return hashCode;
             }
         }
